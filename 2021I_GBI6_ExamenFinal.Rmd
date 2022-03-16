@@ -202,7 +202,9 @@ cancertype_boxplots
 ```{r boxplot3}
 # Escriba el código para guardar la tercera figura de la lista. 
 
+cancertype_boxplots[3]
 
+ggsave("boxplot3.png",device="png",path="results",width=20, height=20,units='cm',dpi = 300)
 ```
 
 
