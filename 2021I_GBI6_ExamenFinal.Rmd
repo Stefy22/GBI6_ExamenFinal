@@ -129,6 +129,18 @@ prueba
 ```{r desc_table}
 # Escriba el código para crear el Descriptive table 
 
+library(sjPlot)
+library(sjmisc)
+
+
+cancer_mama <- prueba %>% group_by(gen) %>% mutate(row = row_number()) %>%
+  tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
+  select(-row)
+
+descr(cancer_mama) %>% tab_df(title = "Estadistica descriptiva del cancer de MAMA y su nivel de expresion de los diferentes genes",
+                              file = "results/mRNA_expr_summary.doc") 
+cancer_mama
+
 ```
 
 ### [0.5 PUNTOS] 1.6 Interprete los resultados de la tabla resultante de la sección 1.5. 
