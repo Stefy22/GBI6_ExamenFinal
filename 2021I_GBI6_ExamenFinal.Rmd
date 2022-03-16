@@ -180,6 +180,21 @@ tcga_boxplots
 ```{r list_boxplots}
 # Escriba el código para generar la lista. 
 
+cancertype <- list(
+  BRCA <- filter(df_long, dataset == "BRCA"),
+  OV <- filter(df_long, dataset == "OV"),
+  LUSC <- filter(df_long, dataset == "LUSC"),
+  KIPAN <- filter(df_long, dataset == "KIPAN"),
+  KIRP <- filter(df_long, dataset == "KIRP"),
+  UCEC <- filter(df_long, dataset == "UCEC")
+)
+
+cancertype
+
+cancertype_boxplots = lapply(cancertype, function(x) {ggplot(x, aes(dataset, expresion_level, col = dataset)) +
+    geom_boxplot() + theme(legend.position='none') + labs(x = "", y = "Expression level")})
+
+cancertype_boxplots
 
 ```
 
