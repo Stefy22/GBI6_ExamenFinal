@@ -213,6 +213,22 @@ ggsave("boxplot3.png",device="png",path="results",width=20, height=20,units='cm'
 ```{r reg_gen_exp}
 # Escriba aquí su función reg_gen_expression
 
+reg_gen_expression <- function(d){
+  genx=d[1]
+  geny=d[2]
+  df_long1 <- df %>% pivot_longer(!c(bcr_patient_barcode, dataset), names_to= "gen1", values_to ="expresion_level1")
+  df_long2 <- df %>% pivot_longer(!c(bcr_patient_barcode, dataset), names_to= "gen2", values_to ="expresion_level2")
+  g <- df_long1 %>% filter (gen1 == genx)
+  j <- df_long2 %>% filter (gen2 == geny)
+  k <- merge(x=g, y=j, all=TRUE)
+  h <- k %>% ggplot(aes(x = expresion_level1, y = expresion_level2, color=dataset)) + geom_point() + geom_smooth(method=lm, se=FALSE)
+  h
+}
+
+
+d <- c("GATA3","PTEN")
+i <- reg_gen_expression(d)
+i
 
 ```
 
