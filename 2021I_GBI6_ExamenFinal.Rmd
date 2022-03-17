@@ -267,6 +267,7 @@ dpi = 300,limitsize=TRUE)
 ### [1 PUNTO] 2.7. Interprete los resultados de las figuras ```boxplot3.png``` y ```regresion11.pdf```.
 
 ```{tex}
+
 # Esciba aquí su intepretación
 
 ### boxplot3
