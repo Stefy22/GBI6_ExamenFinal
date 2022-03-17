@@ -189,13 +189,11 @@ cancertype <- list(
   UCEC <- filter(df_long, dataset == "UCEC")
 )
 
-cancertype
-
 cancertype_boxplots = lapply(cancertype, function(x) {ggplot(x, aes(dataset, expresion_level, col = dataset)) +
     geom_boxplot() + theme(legend.position='none') + labs(x = "", y = "Expression level")})
+    
 
 cancertype_boxplots
-
 ```
 
 ### [0.5 PUNTOS] 2.3 Guarde en el subdirectorio ```result``` el tercer plot de la lista ```cancertype_boxplots``` con el nombre ```boxplot3.png```. La definición de a figura debe ser de 300dpi. 
@@ -251,6 +249,13 @@ reg_genplots[[11]]
 ### [0.5 PUNTOS] 2.6. Guarde en el subdirectorio ```result``` el onceavo plot de la lista ```reg_genplots``` con el nombre ```regresion11.pdf```. La definición de a figura debe ser de 300dpi. 
 ```{r reg11}
 # Escriba el código para guardar el onceavo plot. 
+
+m <- reg_genplots[[11]]
+
+ggsave(filename = "results/regresion11.pdf", units="in",
+dpi = 300,limitsize=TRUE)
+
+m
 
 ```
 
