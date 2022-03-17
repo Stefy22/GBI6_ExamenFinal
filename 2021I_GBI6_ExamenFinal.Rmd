@@ -271,11 +271,16 @@ dpi = 300,limitsize=TRUE)
 
 ### boxplot3
 
-# Las distribución de datos de estos genes no presentan una distribución normal, ya que existe una alta cantidad de datos anormales, por lo que se podría decir que esos son productos de algún fenómeno poco común.
+# Las distribución de datos de estos genes no presentan una distribución normal,
+# ya que existe una alta cantidad de datos anormales, por lo que se podría decir
+# que esos son productos de algún fenómeno poco común.
 
 ### regresion11
 
-# Se puede observar que las regresiones para KIRT, UCEC Y BRCA son invesas para los genes PTEN Y GAPDH, por lo que si aunmenta su nivel de expreesión en el gen PTEN, este lo que va hacer es disminuir el nivel de expresión del gen GAPDH.
+# Se puede observar que las regresiones para KIRT, UCEC Y BRCA son invesas para
+# los genes PTEN Y GAPDH, por lo que si aunmenta su nivel de expreesión en el
+# gen PTEN, este lo que va hacer es disminuir el nivel de expresión del gen
+# GAPDH.
 
 ```
 
