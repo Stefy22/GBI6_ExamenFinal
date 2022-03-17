@@ -149,7 +149,9 @@ cancer_mama
 ```{tex}
 # Escriba aquí su interpretación 
 
+# En la tabla descriptiva que se generó en la actividad 1.5 nos muestra los niveles de expresiones de los firecntes ditpos de genes que nos dio la data, un claro ejemplo de unos de los tantos resultados para cada uno de los genes, es la variable BRCA que se encuentra en el cuerpo uterino, esta variable posee 54 reconocimientos, lo cual contienen una mayor expresión en el gen ESR1 con un promedio de 2.17.
 
+# Cabe recalcar que los resulados que nos dio esta tabla para cada uno de los genes son: su variable; tipo; etiqueta; # de datos; media; moda; rango; tambien nos da el error estandar y su deviación típica.
 
 ```
 
@@ -251,12 +253,8 @@ reg_genplots[[11]]
 # Escriba el código para guardar el onceavo plot. 
 
 m <- reg_genplots[[11]]
-
 ggsave(filename = "results/regresion11.pdf", units="in",
 dpi = 300,limitsize=TRUE)
-
-m
-
 ```
 
 
@@ -264,6 +262,14 @@ m
 
 ```{tex}
 # Esciba aquí su intepretación
+
+### boxplot3
+
+# Las distribución de datos de estos genes no presentan una distribución normal, ya que existe una alta cantidad de datos anormales, por lo que se podría decir que esos son productos de algún fenómeno poco común.
+
+### regresion11
+
+# Se puede observar que las regresiones para KIRT, UCEC Y BRCA son invesas para los genes PTEN Y GAPDH, por lo que si aunmenta su nivel de expreesión en el gen PTEN, este lo que va hacer es disminuir el nivel de expresión del gen GAPDH.
 
 ```
 
